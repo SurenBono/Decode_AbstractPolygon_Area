@@ -3,7 +3,7 @@
 // Structure to define a vertex
 struct Vertex {
   double lat;
-    double lon;
+  double lon;
     };
 
     // Structure to define a polygon
