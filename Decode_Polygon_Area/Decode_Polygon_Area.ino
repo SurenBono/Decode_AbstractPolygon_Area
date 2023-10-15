@@ -8,7 +8,7 @@ struct Vertex {
 
     // Structure to define a polygon
     struct Polygon {
-      Vertex vertices[100]; // Replace 5 with the number of vertices in your polygon
+      Vertex vertices[100]; // Replace with the number of vertices in your polygon
         const char *name;
         const char *country ;
         const char *tz;
