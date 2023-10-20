@@ -1,6 +1,6 @@
 // Define the vertices for the first polygon
-int poly1Y[] = {0,10,10,20,20,30,30,0};
-int poly1X[] = {0, 0,15,15,10,10,30,30};
+int poly1Y[] = {0,10,10,20,20,30,30,0}; // Latitude 
+int poly1X[] = {0, 0,15,15,10,10,30,30};// Longitude 
 int numVertices1 = 8;
 
 // Define the vertices for the second polygon
@@ -9,8 +9,8 @@ int poly2X[] = {0, 15,15, 0};
 int numVertices2 = 4;
 
 // Define the point to check
-int pointY = 15;//35
-int pointX = 10;//25
+int pointY = 15;//Lat
+int pointX = 10;//Long
 
 void setup() {
   Serial.begin(9600);
