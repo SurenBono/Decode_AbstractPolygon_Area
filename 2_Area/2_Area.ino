@@ -18,27 +18,26 @@ void setup() {
   }
 
   void loop() {
-    // Check if the point is inside the first polygon
-      if (isPointInPolygon(pointX, pointY, poly1X, poly1Y, numVertices1)) {
-          Serial.println("Point is inside polygon 1");
-            }
-              // Check if the point is inside the second polygon
-               else if (isPointInPolygon(pointX, pointY, poly2X, poly2Y, numVertices2)) {
-                    Serial.println("Point is inside polygon 2");
-                      }
-                      else{Serial.println("Undefined Area");}
-                        delay(1000);
-                        }
+   // Check if the point is inside the first polygon
+   if (isPointInPolygon(pointX, pointY, poly1X, poly1Y, numVertices1)) {
+      Serial.println("Point is inside polygon 1");
+         }
+   // Check if the point is inside the second polygon
+    else if (isPointInPolygon(pointX, pointY, poly2X, poly2Y, numVertices2)) {
+    Serial.println("Point is inside polygon 2");  }
+    else{Serial.println("Undefined Area");}
+    delay(1000);
+     }
 
-                        // Function to check if a point is inside a polygon
-                        bool isPointInPolygon(int x, int y, int* polyX, int* polyY, int numVertices) {
-                          bool inside = false;
-                            for (int i = 0, j = numVertices - 1; i < numVertices; j = i++) {
-                                if (((polyY[i] > y) != (polyY[j] > y)) &&
-                                        (x < (polyX[j] - polyX[i]) * (y - polyY[i]) / (polyY[j] - polyY[i]) + polyX[i])) {
-                                              inside = !inside;
-                                                  }
-                                                    }
-                                                      return inside;
-                                                      }
-                                                      
+     // Function to check if a point is inside a polygon
+      bool isPointInPolygon(int x, int y, int* polyX, int* polyY, int numVertices) {
+      bool inside = false;
+      for (int i = 0, j = numVertices - 1; i < numVertices; j = i++) {
+      if (((polyY[i] > y) != (polyY[j] > y)) &&
+         (x < (polyX[j] - polyX[i]) * (y - polyY[i]) / (polyY[j] - polyY[i]) + polyX[i])) {
+          inside = !inside;
+                 }
+                     }
+                      return inside;
+                     }
+  // end of code                           
