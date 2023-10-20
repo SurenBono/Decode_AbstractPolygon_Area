@@ -25,7 +25,6 @@ double degToRad(double degrees) {
    double a = sin(dLat / 2) * sin(dLat / 2) + cos(lat1) * cos(lat2) * sin(dLong / 2) * sin(dLong / 2);
    double c = 2 * atan2(sqrt(a), sqrt(1 - a));
    double distanceKm = 6371 * c; // Earth's radius in km
-
    return distanceKm;
     }
 
@@ -46,8 +45,6 @@ double degToRad(double degrees) {
      Serial.print("km");                                                                       }
       }
 
-       void loop() {
-              // Your Arduino loop code
-                    }
+       void loop() {  }
 //end of code
                                                 
